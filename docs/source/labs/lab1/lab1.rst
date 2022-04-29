@@ -28,9 +28,13 @@ cualquier instancia o template de cualquier tipo de código, no sin antes realiz
 una investigación de los protocolos de comunicación (los cuales darán servicio a ``eieManager``) más seguros y eficientes.
 
 Entonces, como primer objetivo específico se puede mencionar:
+
 * Investigar los protocolos de comunicación que asegurarán la calidad de comunicación entre ``eieManager`` y el cliente. 
+
 * Identificar el framework de desarrollo de la API más adecuado para brindar servicio a un cliente en cualquier lenguaje de programación.
+
 * Definir un ambiente de desarrollo que permita mapear el avance en los códigos para la API a través del control de versiones.
+
 * Desarrollar la API desde la cual se hará efectiva la transmisión de datos entre el software administrador y el cliente.
 
 Desde esta perspectiva, se deben tomar en cuenta diferentes
