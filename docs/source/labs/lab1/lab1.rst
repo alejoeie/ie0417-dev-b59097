@@ -43,14 +43,39 @@ se debe apuntar a un mapa de trabajo que facilite el desarrollo de los entregabl
 De esta manera, se plantean los posibles entregables que pueden estructurar el cumplimiento de cada uno de los objetivos específicos 
 anteriormente mencionados: 
 
+* Investigar los protocolos de comunicación que asegurarán la calidad de comunicación entre ``eieManager`` y ``Client``:
+ 
+ * Comparación entre los métodos MQTT, CoAP y HTTP, los cuales son más comúnmente asociados a los protocolos con dispositivos IoT integrados.
+ 
+ * Considerar la utilización del lenguaje para el desarrollo de ``Client``, el cual puede afinar la elección de los protocolos de comunicación.
+ 
+* Identificar el framework de desarrollo de la API más adecuado para brindar servicio a un cliente en cualquier lenguaje de programación.
+ 
+ * Especificar la elección del tipo de base de datos, relacional o no relacional, según el almacenamiento de datos.
+ 
+ * Identificar el manejo de múltiples APIs como por ejemplo ThinkSpeak API, que involucra ya funciones para dispositivos interconectados.
+ 
+ * Elegir el gestor de contenedores más apropiado para generar un contenedor con todas las dependencias de la API para que no existan conflictos en los
+ llamados a funciones dentro del gestor de la API.
+ 
+* Definir un ambiente de desarrollo que permita mapear el avance en los códigos para la API a través del control de versiones.
+ 
+ * Identificar las comparativas entre Github y GitLab para elegir el gestor de repositorios de la empresa desarrolladora. De esta manera,
+ y bajo el estándar de código abierto y licencias open source, que el código base sea liberado a los desarrolladores de ``Client`` para efectos
+ de conocimiento de los parámetros del mismo.
+ 
 * Para el desarrollo de la API desde la cual se hará efectiva la transmisión de datos:
 
  * Identificar el gestor de bases de datos más apropiado para el almacenamiento de datos dentro de la plataforma. 
  
  * Determinar el gestor de dominio y deployment de la base de datos en el servidor, para asegurar las conexiones desde el ``Client``.
 
- * Definir el modelo de cliente-servidor, estructurado mediante una comunicación RPC (Remote Procedure Call) de una manera similar a la siguiente
-  (el modelo pude ser sometido a cambios a medida que se avanza en los entregables):
+ * Definir el modelo de cliente-servidor, estructurado mediante una comunicación RPC (Remote Procedure Call) 
+   de una manera similar a la siguiente (el modelo pude ser sometido a cambios a medida que se avanza en los entregables):
   
   .. image:: img/rpc.png
    :align: center
+ 
+
+   
+   
