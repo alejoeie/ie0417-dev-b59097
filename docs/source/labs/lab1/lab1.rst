@@ -76,6 +76,6 @@ anteriormente mencionados:
   .. image:: img/rpc.png
    :align: center
  
-
-   
+Requerimientos
+==============
    
