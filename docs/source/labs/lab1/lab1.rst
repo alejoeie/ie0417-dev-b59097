@@ -27,7 +27,7 @@ aplicación. Entonces se debe construir una API robusta capaz de ser llamada des
 cualquier instancia o template de cualquier tipo de código, no sin antes realizar
 una investigación de los protocolos de comunicación (los cuales darán servicio a ``eieManager``) más seguros y eficientes.
 
-Entonces, como primer objetivo específico se puede mencionar:
+Entonces, como primeros objetivos específicos se puede mencionar:
 
 * Investigar los protocolos de comunicación que asegurarán la calidad de comunicación entre ``eieManager`` y el cliente. 
 
@@ -37,7 +37,20 @@ Entonces, como primer objetivo específico se puede mencionar:
 
 * Desarrollar la API desde la cual se hará efectiva la transmisión de datos entre el software administrador y el cliente.
 
-Desde esta perspectiva, se deben tomar en cuenta diferentes
-conceptos que involucran el desarrollo del software administrador. 
-Como primer paso, se debe construir la API de la cual el Cliente
-tendrá acceso a la información de ``eieManager``
+Se tienen en cuenta objetivos un poco más singulares y simplistas con base en el anterior argumento, sin embargo,
+se debe apuntar a un mapa de trabajo que facilite el desarrollo de los entregables. 
+
+De esta manera, se plantean los posibles entregables que pueden estructurar el cumplimiento de cada uno de los objetivos específicos 
+anteriormente mencionados: 
+
+* Para el desarrollo de la API desde la cual se hará efectiva la transmisión de datos:
+
+ * Identificar el gestor de bases de datos más apropiado para el almacenamiento de datos dentro de la plataforma. 
+ 
+ * Determinar el gestor de dominio y deployment de la base de datos en el servidor, para asegurar las conexiones desde el ``Client``.
+
+ * Definir el modelo de cliente-servidor, estructurado mediante una comunicación RPC (Remote Procedure Call) de una manera similar a la siguiente
+  (el modelo pude ser sometido a cambios a medida que se avanza en los entregables):
+  
+  .. image:: img/rpc.png
+   :align: center
