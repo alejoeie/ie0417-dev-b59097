@@ -1,5 +1,5 @@
-Laboratorio I
-=============
+Laboratorios
+============
 
 Estos son los reportes de los laboratorios del curso.
 
