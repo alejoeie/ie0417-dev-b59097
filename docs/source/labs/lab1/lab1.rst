@@ -56,13 +56,12 @@ anteriormente mencionados:
  * Identificar el manejo de múltiples APIs como por ejemplo ThinkSpeak API, que involucra ya funciones para dispositivos interconectados.
  
  * Elegir el gestor de contenedores más apropiado para generar un contenedor con todas las dependencias de la API para que no existan conflictos en los
- llamados a funciones dentro del gestor de la API.
+   llamados a funciones dentro del gestor de la API.
  
 * Definir un ambiente de desarrollo que permita mapear el avance en los códigos para la API a través del control de versiones.
  
- * Identificar las comparativas entre Github y GitLab para elegir el gestor de repositorios de la empresa desarrolladora. De esta manera,
- y bajo el estándar de código abierto y licencias open source, que el código base sea liberado a los desarrolladores de ``Client`` para efectos
- de conocimiento de los parámetros del mismo.
+ * Identificar las comparativas entre Github y GitLab para elegir el gestor de repositorios de la empresa desarrolladora. 
+   De esta manera, y bajo el estándar de código abierto y licencias open source, que el código base sea liberado a los desarrolladores de ``Client`` para    efectos de conocimiento de los parámetros del mismo.
  
 * Para el desarrollo de la API desde la cual se hará efectiva la transmisión de datos:
 
@@ -77,5 +76,84 @@ anteriormente mencionados:
    :align: center
  
 Requerimientos
-==============
+--------------
+
+ * Requerimientos funcionales:
+ 
+  * ``FUNREQ-A``: Proveer la seguridad en las conexiones dentro del sistema.
+  
+  * ``FUNREQ-B``: Generar una respuesta a consultas desde third-party apps (``Client``).
+  
+  * ``FUNREQ-C``: Proveer compatibilidad de hardware y software entre los dispositivos interconectados.
+  
+  * ``FUNREQ-D``: Habilitar una API dinámica con una amplia gestión de comandos que permita el ingreso
+    de nuevas funcionalidades dentro de los dispositivos interconectados.
+    
+  * ``FUNREQ-E``: Proveer un sistema de comunicación eficiente en su ancho de banda para habilitar las conexiones
+    múltiples entre los dispositivos.
+    
+  * ``FUNREQ-F``: Brindar un sistema de alarmas que interrumpa operaciones dentro de ``eieManager``, para 
+    asegurar el rendimiento del servidor. 
+ 
+* Requerimientos no funcionales:
+ 
+ * ``NFUNREQ-A``: Si existe un daño en el sistema como vulneración de información, interrupciones espontáneas de corriente
+   o daño catastrófico, generar un sistema de recuperación de información que resguarde y encripte la información transmitida
+   y se almacene como copia de seguridad dentro de la base de datos que se puede considerar almacenamiento de archivo. A la vez
+   que se reconstruye el estado actual de la información dentro de ``eieManager`` para facilitar las transacciones desde la
+   última consulta, hasta el momento de la falla, de tal forma que el administrador no se vea desprotegido ni anulado toda
+   la información.
+   
+ * ``NFUNREQ-B``: Se debe asegurar la calidad de la protección de la información en una base de datos, cuyo proveedor del 
+   servicio sea elegido con un previo análisis de equipo y comparación entre diferentes opciones disponibles.
+  
+ * `Atributos de seguridad de software:
+  
+  * Disponibilidad:
+   
+   * ``NFUNREQ-C``: Como se está almacenando toda la información de dispositivos en un servidor, éste
+     debe asegurar la conexión y disponibilidad todo el tiempo durante el servicio.
+  
+  * Confiabilidad:
+   
+   * ``NFUNREQ-D``: Asegurar la protección de información a través de la encriptación de IPs e 
+     información sensible de los dispositivos a través de métodos SHA, por ejemplo.
+   
+   * ``NFUNREQ-E``: Generar copias de seguridad en caso de una interrupción en la comunicación
+     de un n-dispositivo.
+    
+  * Mantenibilidad:
+  
+   * ``NFUNREQ-F``: Designar personal encargado de verificar el rendimiento del sistema y generar
+     un sistema de calendarios para asegurar la continuidad en la verificación.
+     
+   * ``NFUNREQ-G``: Atribuir responsabilidades para que exista un grupo de desarrolladores que 
+     diseñen y estructuren software con actualizaciones con respecto a las librerías y dependencias
+     utilizadas en el código primario.
+    
+   * ``NFUNREQ-H``: Optimizar el rendimiento de la API a través de parches con actualizaciones de 
+     software para asegurar el up-to-date de las funciones en la gestión.
+   
+  * Portabilidad:
+  
+   * ``NFUNREQ-I``: Uso de Python para la gestión de los protocolos de entrada y salida de comandos.
+   
+   * ``NFUNREQ-J``: Uso de Java para la generación del código de protocolos de comunicación.
+   
+   * ``NFUNREQ-K``: Que todos los dispositivos manejen al menos sistemas basados en UNIX.
+   
+   * ``NFUNREQ-L``: Utilizar MongoDB para la base de datos y ReactJS para la UX en ``Client``.
+   
+   * ``NFUNREQ-M``: Utilizar algoritmos de estructuras de datos utilizando STL en C++. 
+  
+  * Requerimientos de Hardware:
+   
+   * ``NFUNREQ-N``: Utilizar un Procesador ICX Intel Xeon para el procesamiento de datos en el servidor. 
+   
+   * ``NFUNREQ-O``: 1 TB de almacenamiento en el servidor. 
+   
+   * ``NFUNREQ-P``: Memoria RAM tipo ECC para el servidor de 64GB.
+   
+   * ``NFUNREQ-Q``: 128GB de espacio disponible mínimo para cada dispositivo.
+
    
