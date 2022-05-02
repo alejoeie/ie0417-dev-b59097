@@ -219,11 +219,11 @@ Como parte del paso 1, se tiene en cuenta suficiente información para iniciar c
 	* Se tiene que desde ``eieManager`` se pueden asegurar los atributos de calidad de la siguiente manera:ç
 	
 		.. image:: img/eieman.png
-   		:align: center
+   			
 	* Posteriormente, desde ``eieDevice`` se puede diseñar un flujo que asegure los atributos de calidad como prosigue:
 	
 		.. image:: img/eieDev.png
-   		:align: center
+   	
 		
 
 	
