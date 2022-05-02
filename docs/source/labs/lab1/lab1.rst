@@ -155,6 +155,79 @@ Requerimientos
    * ``NFUNREQ-P``: Memoria RAM tipo ECC para el servidor de 64GB.
    
    * ``NFUNREQ-Q``: 128GB de espacio disponible mínimo para cada dispositivo.
+   
+ADD (Attribute Driven Design)
+=============================
+
+* Responsabilidades de diseño:
+	
+	* El principio de diseño de separación de responsabilidades es crucial para el proceso de `Attribute-Driven Design` (ADD). En el caso de 		``eieManager``, se pueden definir componentes que se encarguen de distintas responsabilidades, tales como:
+
+  	  	* ``ConfigHandler`` Configuración a partir de un archivo. Este puede incluir la lista de dispositivos soportados con su respectiva 			información (nombre, grupo broadcast, datos de conexión, etc).
+  	  	* ``APIServer`` Servicio de solicitudes del cliente.
+  	  	* ``CommandRegistry`` Registro de los comandos soportados y su información.
+  	  	* ``DeviceManager`` Administración del ciclo de vida de los dispositivos.
+	  	* ``GroupManager`` Resolución de dispositivos pertenecientes a grupos `broadcast`.
+	  	* ``CommandInvoker`` Controla la ejecución de los comandos solicitados por el cliente.
+	  	* ``TransportClient`` Abstrae el protocolo de comunicación para interactuar con el dispositivo. Un derivado de este componente puede ser 	             ``RPCClient``
+	  	* ``DatabaseHandler`` `Wrapper` de una base de datos para almacenar configuración y estado.
+	  	* Otros objetos relevantes para el diseño podrían ser ``Device``, ``Group`` y ``CommandInfo``.
+
+	* En el caso de ``eieDevice``, se pueden definir componentes tales como:
+
+  		* ``TransportServer`` Responde a solicitudes de comandos provenientes del ``TransportClient``.
+  		* ``CommandManager`` Registro y ejecución de los comandos soportados por el dispositivo.
+  		* ``Command`` Implementa la funcionalidad del comando.
+
+* Atributos de calidad: se tienen en cuenta los atributos de calidad dentro de las especificaciones SRS del proyecto en cuestión.
+
+* Requerimientos funcionales: se han instanciado los requerimientos funcionales en la sección anterior.
+
+Como parte del paso 1, se tiene en cuenta suficiente información para iniciar con la metodología ADD.
+
+* Paso 2: Un elemento del sistema que se podrá descomponer es el correspondiente a ``eieManager``.
+
+* Paso 3:	
+	
+	* Architectural drivers: 
+		
+		+------------------------------------------------------------------------------+------------+
+		| Objetivo de negocio                                                          |  Prioridad |
+		+==============================================================================+============+
+		| | Que el API pueda ser fácilmente consumido por otro equipo de desarrollo    | H          |
+		| | para implementar un cliente en un App móvil con GUI. No se puede asumir    |            |
+		| | que este cliente va a utilizar algún lenguaje en específico.               |            |
+		+------------------------------------------------------------------------------+------------+
+		| | Soportar dispositivos heterogéneos, de distintos fabricantes y/o           | H          |
+		| | características. Nuevos dispositivos deben ser sencillos de agregar y      |            |
+		| | esto no debe implicar cambios en el API. Además, ciertos dispositivos y    |            |
+		| | casos de uso podrían requerir nuevos protocolos de comunicación.           |            |
+		+------------------------------------------------------------------------------+------------+
+		| | Que el sistema sea capaz de generar una amplia variedad de comandos.       | H          |
+		| | Nuevos comandos deben ser sencillos de agregar y esto no debe implicar     |            |
+		| | cambios en el API.                                                         |            |
+		+------------------------------------------------------------------------------+------------+
+		| | Que el sistema tenga un rendimiento y escalabilidad adecuada al operar con | M          |
+		| | los dispositivos, tal que se soporte el envío de comandos a múltiples      |            |
+		| | dispositivos simultáneamente en los casos de `broadcast`.                  |            |
+		+------------------------------------------------------------------------------+------------+
+		| | Que el sistema tenga alta disponibilidad, siendo capaz de volver a su      | M          |
+		| | operación normal luego de un fallo que genere un cierre del proceso de     |            |
+		| | ``eieManager``, recuperando su estado original.                            |            |
+		+------------------------------------------------------------------------------+------------+
+* Paso 4: 
+	* Se tiene que desde ``eieManager`` se pueden asegurar los atributos de calidad de la siguiente manera:ç
+	
+		.. image:: img/eieman.png
+   		:align: center
+	* Posteriormente, desde ``eieDevice`` se puede diseñar un flujo que asegure los atributos de calidad como prosigue:
+	
+		.. image:: img/eieDev.png
+   		:align: center
+		
+
+	
+
 
 Patrones de Diseño
 ==================
