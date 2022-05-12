@@ -5,6 +5,8 @@ Laboratorio 1
 Endpoints
 ==================
 
+Para lograr que el prototipo cumpla con las operaciones que se desean, se deben de tener los siguientes endpoints.
+
 +-------------+----------------------+---------------------------+
 | HTTP method |   API endpoint       |  Descripción              |
 +=============+======================+===========================+
@@ -24,4 +26,6 @@ Endpoints
 | |           |                      | respuesta de un           |
 | |           |                      | disopositivo especifico   |
 +-------------+----------------------+---------------------------+
+
+
 
