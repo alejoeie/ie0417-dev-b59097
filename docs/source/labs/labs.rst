@@ -7,7 +7,4 @@ Estos son los reportes de los laboratorios del curso.
    :maxdepth: 2
 
    lab1/lab1
-.. toctree::
-   :maxdepth: 2
-   
    lab2/lab2
