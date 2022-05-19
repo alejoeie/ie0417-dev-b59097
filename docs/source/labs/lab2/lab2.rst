@@ -1,5 +1,5 @@
 *************
-Laboratorio 1
+Laboratorio 2
 *************
 
 Endpoints
@@ -26,7 +26,7 @@ Para lograr que el prototipo cumpla con las operaciones que se desean, se deben 
 | |           |                          | respuesta de un           |
 | |           |                          | disopositivo especifico   |
 +-------------+--------------------------+---------------------------+
-| |   GET     | /devices/<device_command | Permite obtener commands  |
+| |   GET     |/devices/<device_command> | Permite obtener commands  |
 | |           |                          | y dar una respuesta       |
 | |           |                          | mediantea archivo Json    |
 +-------------+--------------------------+---------------------------+
