@@ -1,0 +1,2 @@
+[console_scripts]
+EieManager = device_commands.main:main

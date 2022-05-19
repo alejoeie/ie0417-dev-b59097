@@ -78,7 +78,7 @@ def find_requirements(filename):
 
 
 setup(
-    name='sensor_commands',
+    name='eieManagerlab2FA',
     version=find_version('lib/device_commands/__init__.py'),
     package_dir={'': 'lib'},
     packages=find_packages('lib'),
@@ -88,14 +88,14 @@ setup(
     install_requires=find_requirements('requirements.txt'),
 
     # Metadata
-    author=['Fabricio', 'Alejandro Zuniga Perez'],
-    author_email='alezph96@gmail.com',
+    author=['Fabricio Donato Hidalgo', 'Alejandro Zuniga Perez'],
+    author_email='alezph96@gmail.com', 
     description=(
-        'device_commands is an example python package for the '
+        'EieManager is an python package for the '
         'IE0417 course @ EIE, UCR'
     ),
     long_description=read('README.md'),
-    url='http://ie0417.rtfd.org/',
+    url='',
 
     classifiers=[
         'Intended Audience :: Developers',
@@ -108,7 +108,7 @@ setup(
     # Entry points
     entry_points={
         'console_scripts': [
-            'sensor_cmds=device_commands.main:main',
+            'EieManager=device_commands.main:main',
         ],
     }
 )

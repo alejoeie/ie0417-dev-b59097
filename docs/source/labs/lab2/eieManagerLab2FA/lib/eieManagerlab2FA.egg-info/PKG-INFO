@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: eieManagerlab2FA
+Version: 0.0.1
+Summary: EieManager is an python package for the IE0417 course @ EIE, UCR
+Home-page: 
+Author: ['Fabricio Donato Hidalgo', 'Alejandro Zuniga Perez']
+Author-email: alezph96@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+# EieManager package
+
+This is a package for the EieManager module. 
