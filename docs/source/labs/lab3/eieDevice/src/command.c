@@ -22,8 +22,8 @@ struct Command *command_create(struct CommandInfo *info,
 double command_execute(struct Command *cmd)
 {
     char resp ;
-    if (cmd->ops && cmd->ops->read) {
-        val = cmd->ops->read(&cmd->info, cmd->priv);
+    if (cmd->ops && cmd->ops->execute) {
+        reps = cmd->ops->read(&cmd->info, cmd->resp_msg);
     }
     return resp;
 }

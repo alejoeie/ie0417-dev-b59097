@@ -11,7 +11,7 @@ struct CommandInfo {
 /** Command operations to implement specific commands */
 struct CommandOps {
     /** execute a command */
-    const char (*execute)(struct CommandInfo *info, void name, void *priv);
+    const char (*execute)(struct CommandInfo *info, void *priv);
 };
 
 /** Command structure */
